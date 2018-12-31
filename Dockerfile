@@ -17,5 +17,5 @@ RUN cd sw && svn checkout --trust-server-cert https://svn.code.sf.net/p/xsb/src/
 
 RUN cd sw/xsb-src/build && ./configure --with-pita --prefix=/usr/local
 RUN cd sw/xsb-src/build && ./makexsb && ./makexsb install
-RUN echo 'alias xsb="rlwrap /sw/xsb-src/bin/xsb"'>> /root/.profile
+RUN echo 'alias xsb="rlwrap /sw/xsb-src/bin/xsb"'> /root/.bash_aliases
 
