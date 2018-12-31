@@ -1,0 +1,183 @@
+docker run -it xsb bash
+root@564636fdc7ff:/# xsb
+rlwrap: warning: Your terminal 'xterm' is not fully functional, expect some problems.
+
+warnings can be silenced by the --no-warnings (-n) option
+[xsb_configuration loaded, cpu time used: 0.001 seconds]
+[sysinitrc loaded, cpu time used: 0.001 seconds]
+[xsbbrat loaded]
+
+XSB Version 3.8.0 (Three-Buck Chuck) of October 28, 2017
+[x86_64-unknown-linux-gnu 64 bits; mode: optimal; engine: slg-wam; scheduling: local]
+[Build date: 2018-12-31]
+
+| ?-
+End XSB (cputime 0.05 secs, elapsetime 5.99 secs)
+
+root@564636fdc7ff:/# cd sw/xsb-src/packages/pita
+root@564636fdc7ff:/sw/xsb-src/packages/pita# xsb
+rlwrap: warning: Your terminal 'xterm' is not fully functional, expect some problems.
+
+warnings can be silenced by the --no-warnings (-n) option
+[xsb_configuration loaded, cpu time used: 0.001 seconds]
+[sysinitrc loaded]
+[xsbbrat loaded]
+
+XSB Version 3.8.0 (Three-Buck Chuck) of October 28, 2017
+[x86_64-unknown-linux-gnu 64 bits; mode: optimal; engine: slg-wam; scheduling: local]
+[Build date: 2018-12-31]
+
+| ?- [testpita].
+[Compiling ./testpita]
+[testpita compiled, cpu time used: 0.040 seconds]
+[testpita loaded]
+[Compiling /sw/xsb-src/packages/pita]
+[pita compiled, cpu time used: 0.008 seconds]
+[pita loaded]
+[Compiling /sw/xsb-src/packages/pita/pita_int]
+[pita_int compiled, cpu time used: 0.140 seconds]
+[pita_int loaded, cpu time used: 0.001 seconds]
+[Compiling Foreign Module /sw/xsb-src/packages/pita/pita_lib (Prolog compiler options are ignored)]
+[pita_lib compiled, cpu time used: 0.002 seconds]
+[Compiling C file /sw/xsb-src/packages/pita/pita_lib.c using gcc]
+gcc  -o /sw/xsb-src/packages/pita/pita_lib.so -shared /sw/xsb-src/packages/pita/pita_lib.c xsb_wrap_pita_lib.c  -Wall -fPIC -I/sw/xsb-src/emu -I/sw/xsb-src/config/x86_64-unknown-linux-gnu -Icudd-3.0.0 -Icudd-3.0.0/cudd -Icudd-3.0.0/util -fPIC -DBP_FREE -O3 -fomit-frame-pointer -Wall -g -O2   -O3 -fno-strict-aliasing   -fPIC -Wall -pipe      -lm -ldl -Wl,-export-dynamic -lpthread -Lcudd-3.0.0/cudd/.libs/ -lcudd -lm
+[pita_lib loaded]
+
+yes
+| ?- main.
+[Compiling examples/ex]
+[ex compiled, cpu time used: 0.058 seconds]
+[ex loaded, cpu time used: 0.001 seconds]
+File: ex, qeury: a, expected probability: 0.226000
+Actual probability: 0.226000l
+CPU time: 0.006000 Wall time: 0.021000
+
+[Compiling examples/exist]
+[exist compiled, cpu time used: 0.036 seconds]
+
+++Warning[XSB]: [Runtime/C] Redefining: a_$/1 from file /sw/xsb-src/packages/pita/examples/exist.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/ex.xwam
+
+++Warning[XSB]: [Runtime/C] Redefining: a/1 from file /sw/xsb-src/packages/pita/examples/exist.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/ex.xwam
+[exist loaded]
+File: exist, qeury: a, expected probability: 0.171900
+Actual probability: 0.171900l
+CPU time: 0.000000 Wall time: 0.010000
+
+[Compiling examples/mendel]
+% specialization of aggregate predicate not performed: cg/4
+[mendel compiled, cpu time used: 0.078 seconds]
+[mendel loaded, cpu time used: 0.001 seconds]
+File: mendel, qeury: cg(s,1,p), expected probability: 0.750000
+Actual probability: 0.750000l
+CPU time: 0.003000 Wall time: 0.004000
+
+File: mendel, qeury: cg(s,1,w), expected probability: 0.250000
+Actual probability: 0.250000l
+CPU time: 0.002000 Wall time: 0.003000
+
+File: mendel, qeury: cg(s,2,p), expected probability: 0.250000
+Actual probability: 0.250000l
+CPU time: 0.002000 Wall time: 0.002000
+
+File: mendel, qeury: cg(s,2,w), expected probability: 0.750000
+Actual probability: 0.750000l
+CPU time: 0.003000 Wall time: 0.003000
+
+File: mendel, qeury: cg(f,2,w), expected probability: 0.500000
+Actual probability: 0.500000l
+CPU time: 0.002000 Wall time: 0.002000
+
+File: mendel, qeury: cg(s,2,w), expected probability: 0.750000
+Actual probability: 0.750000l
+CPU time: 0.004000 Wall time: 0.004000
+
+[Compiling examples/coin2]
+[coin2 compiled, cpu time used: 0.103 seconds]
+[coin2 loaded]
+File: coin2, qeury: heads(coin1), expected probability: 0.510000
+Actual probability: 0.510000l
+CPU time: 0.003000 Wall time: 0.003000
+
+File: coin2, qeury: heads(coin2), expected probability: 0.510000
+Actual probability: 0.510000l
+CPU time: 0.001000 Wall time: 0.002000
+
+File: coin2, qeury: tails(coin1), expected probability: 0.490000
+Actual probability: 0.490000l
+CPU time: 0.001000 Wall time: 0.002000
+
+File: coin2, qeury: tails(coin2), expected probability: 0.490000
+Actual probability: 0.490000l
+CPU time: 0.002000 Wall time: 0.002000
+
+[Compiling examples/ex]
+[ex compiled, cpu time used: 0.056 seconds]
+
+++Warning[XSB]: [Runtime/C] Redefining: a_$/1 from file /sw/xsb-src/packages/pita/examples/ex.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/exist.xwam
+
+++Warning[XSB]: [Runtime/C] Redefining: a/1 from file /sw/xsb-src/packages/pita/examples/ex.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/exist.xwam
+[ex loaded, cpu time used: 0.001 seconds]
+File: ex, qeury: a, expected probability: 0.226000
+Actual probability: 0.226000l
+CPU time: 0.002000 Wall time: 0.002000
+
+[Compiling examples/trigger]
+% specialization of aggregate predicate not performed: pull_trigger/2
+[trigger compiled, cpu time used: 0.043 seconds]
+[trigger loaded, cpu time used: 0.001 seconds]
+File: trigger, qeury: death, expected probability: 0.305556
+Actual probability: 0.305556l
+CPU time: 0.002000 Wall time: 0.003000
+
+[Compiling examples/light]
+[light compiled, cpu time used: 0.067 seconds]
+[light loaded, cpu time used: 0.001 seconds]
+File: light, qeury: light, expected probability: 0.500000
+Actual probability: 0.500000l
+CPU time: 0.003000 Wall time: 0.004000
+
+File: light, qeury: replace, expected probability: 0.500000
+Actual probability: 0.500000l
+CPU time: 0.002000 Wall time: 0.003000
+
+[Compiling examples/threesideddice]
+[threesideddice compiled, cpu time used: 0.051 seconds]
+[threesideddice loaded]
+File: threesideddice, qeury: on(0,1), expected probability: 0.333333
+Actual probability: 0.333333l
+CPU time: 0.000000 Wall time: 0.002000
+
+File: threesideddice, qeury: on(1,1), expected probability: 0.222222
+Actual probability: 0.222222l
+CPU time: 0.001000 Wall time: 0.002000
+
+File: threesideddice, qeury: on(2,1), expected probability: 0.148148
+Actual probability: 0.148148l
+CPU time: 0.003000 Wall time: 0.004000
+
+[Compiling examples/path_loop_chk]
+[path_loop_chk compiled, cpu time used: 0.055 seconds]
+[path_loop_chk loaded, cpu time used: 0.001 seconds]
+File: path_loop_chk, qeury: path(a,c), expected probability: 0.232000
+Actual probability: 0.232000l
+CPU time: 0.002000 Wall time: 0.003000
+
+[Compiling examples/path]
+[path compiled, cpu time used: 0.045 seconds]
+
+++Warning[XSB]: [Runtime/C] Redefining: path_$/3 from file /sw/xsb-src/packages/pita/examples/path.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/path_loop_chk.xwam
+
+++Warning[XSB]: [Runtime/C] Redefining: path/3 from file /sw/xsb-src/packages/pita/examples/path.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/path_loop_chk.xwam
+
+++Warning[XSB]: [Runtime/C] Redefining: edge_$/3 from file /sw/xsb-src/packages/pita/examples/path.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/path_loop_chk.xwam
+
+++Warning[XSB]: [Runtime/C] Redefining: edge/3 from file /sw/xsb-src/packages/pita/examples/path.xwam; Previously defined from file /sw/xsb-src/packages/pita/examples/path_loop_chk.xwam
+[path loaded, cpu time used: 0.001 seconds]
+File: path, qeury: path(a,c), expected probability: 0.232000
+Actual probability: 0.232000l
+CPU time: 0.003000 Wall time: 0.003000
+
+Test successful
+
+yes
+| ?-

@@ -12,3 +12,11 @@ Run it with
 ```
 docker run -it xsb bash
 ```
+
+Available on Docker Hub:
+ 
+```
+docker login
+docker pull friguzzi/xsb
+docker run -it friguzzi/xsb bash
+```
